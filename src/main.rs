@@ -21,7 +21,6 @@ fn main() -> Result<(), ()> {
 
     let provider = services.build_provider().unwrap();
 
-
     Ok(())
 }
 
