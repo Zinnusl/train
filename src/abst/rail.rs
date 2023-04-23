@@ -2,10 +2,8 @@
 
 #[derive(Debug, PartialEq)]
 pub enum RailDir {
-    Up,
-    Down,
-    Left,
-    Right,
+    Horizontal,
+    Vertical,
 }
 
 pub type RailAmount = u64;
