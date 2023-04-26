@@ -1,6 +1,6 @@
 ﻿use crate::abst::*;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum RailDir {
     Horizontal,
     Vertical,

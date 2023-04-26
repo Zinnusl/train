@@ -7,7 +7,7 @@ pub enum ParseError {
     UnexpectedEOF,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum Token {
     Ident(String),
     Number(f64),

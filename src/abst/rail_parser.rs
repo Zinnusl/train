@@ -4,9 +4,10 @@
 pub enum ParseError {
     UnexpectedToken(Token),
     InvalidCharacter(char),
+    IoError,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum Token {
     Locomotive,
     Rail(RailDir, RailAmount),
@@ -14,5 +15,5 @@ pub enum Token {
 }
 
 pub trait TRailParser {
-    fn parse(&mut self, stream: impl std::io::BufRead) -> Result<Vec<Token>, ParseError>;
+    fn parse(&mut self, stream: impl std::io::BufRead) -> Result<Vec<Vec<Token>>, ParseError>;
 }
